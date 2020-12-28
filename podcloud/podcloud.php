@@ -32,37 +32,16 @@ if ( ! defined( "WPINC" ) ) {
 define( "PODCLOUD_VERSION", "1.0.0" );
 define( "PODCLOUD_HELPER_SCRIPT", "https://podcloud.fr/player-embed/helper.js" );
 
-function flag_podcloud_helper_need( $html, $url, $attr, $post_ID ) {
-    global $need_podcloud_helper;
-
-    if ( false !== strpos( $url, "podcloud.fr" ) ) {
-        $need_podcloud_helper = true;
-    }
-
-    return $html;
-}
-add_filter( "embed_oembed_html", "flag_podcloud_helper_need", 99, 4 );
-
 function enqueue_podcloud_helper() {
-    global $need_podcloud_helper;
-
-    if($need_podcloud_helper) {
-        wp_enqueue_script(
-            "podcloud_helper",
-            PODCLOUD_HELPER_SCRIPT,
-            array(),
-            PODCLOUD_VERSION
-        );
-    }
+    wp_enqueue_script(
+        "podcloud_helper",
+        PODCLOUD_HELPER_SCRIPT,
+        array(),
+        PODCLOUD_VERSION
+    );
 }
-
-global $need_podcloud_helper;
-
-$need_podcloud_helper = false;
 
 add_action( "wp_enqueue_scripts", "enqueue_podcloud_helper" );
-add_action( "admin_enqueue_scripts", "enqueue_podcloud_helper" );
-add_action( "enqueue_embed_scripts", "enqueue_podcloud_helper" );
 
 $supported = [
     "http://podcloud.fr/podcast/*",
