@@ -42,7 +42,6 @@ function podcloud_add_helper( $html, $url, $attr, $post_ID ) {
 
 add_filter( "embed_oembed_html", "podcloud_add_helper", 99, 4 );
 
-// Only if WP_VER > 5.4
 function podcloud_enqueue_gutenberg_helper() {
     wp_enqueue_script("podcloud_gutenberg_helper");
 }
