@@ -69,8 +69,11 @@ function podcloud_init() {
     // add oembed provider
     $supported = [
         "podcloud.fr/podcast/*",
+        "podcloud.fr/podcast/*",
+        "*.lepodcast.fr",
         "*.lepodcast.fr/*",
         "pdca.st/*",
+        "podcloud.fr/users/*/playlists/*"
     ];
 
     foreach($supported as $format) {

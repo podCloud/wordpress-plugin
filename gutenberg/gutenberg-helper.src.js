@@ -30,6 +30,7 @@ wp.blocks.registerBlockVariation?.("core/embed", {
   description: __("Embed podCloud content."),
   patterns: [
     /^https?:\/\/(www\.)?podcloud\.fr\/podcast\/.+/i,
+    /^https?:\/\/(www\.)?podcloud\.fr\/users\/.+\/playlists\/.+/i,
     /^https?:\/\/.+\.(lepodcast|podcloud)\.fr(\/.*)?/i,
     /^https?:\/\/pdca\.st\/.+/i,
   ],

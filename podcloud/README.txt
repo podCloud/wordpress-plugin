@@ -3,7 +3,7 @@ Contributors: podcloud, pofmagicfingers
 Tags: podcloud, podcasting, player, podcast
 Requires at least: 2.9
 Tested up to: 5.6
-Stable tag: 1.0
+Stable tag: 1.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,11 @@ You can [contact us](https://podcloud.fr/contact) or join our [Discord community
 2. This is a podCloud player automatically resized in a post
 
 == Changelog ==
+
+= 1.1 =
+
+- Add Gutenberg block
+- Playlist support
 
 = 1.0 =
 
