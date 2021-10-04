@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       podCloud
  * Description:       Ce plugin permet d'inclure un lecteur podCloud d'un podcast ou d'un épisode, simplement en collant son URL dans l'éditeur WordPress. Il ajoute le script de redimensionnement automatique du lecteur magique.
- * Version:           1.0.0
+ * Version:           1.2.0
  * Author:            podCloud
  * Author URI:        https://podcloud.fr
  * License:           GPL-2.0+
@@ -29,7 +29,7 @@ if ( ! defined( "WPINC" ) ) {
     die;
 }
 
-define( "PODCLOUD_VERSION", "1.0.0" );
+define( "PODCLOUD_VERSION", "1.2.0" );
 define( "PODCLOUD_HELPER_SCRIPT", "https://podcloud.fr/player-embed/helper.js" );
 
 function podcloud_add_helper( $html, $url, $attr, $post_ID ) {
