@@ -1,12 +1,6 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
  *
  * @link              https://podcloud.fr
  * @since             1.0.0
@@ -14,8 +8,8 @@
  *
  * @wordpress-plugin
  * Plugin Name:       podCloud
- * Description:       Ce plugin permet d'inclure un lecteur podCloud d'un podcast ou d'un épisode, simplement en collant son URL dans l'éditeur WordPress. Il ajoute le script de redimensionnement automatique du lecteur magique.
- * Version:           1.2.0
+ * Description:       This plugins allow embedding of the podCloud player by pasting a podcast or episode URL into editor.
+ * Version:           1.3.0
  * Author:            podCloud
  * Author URI:        https://podcloud.fr
  * License:           GPL-2.0+
