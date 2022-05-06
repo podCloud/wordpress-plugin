@@ -1,0 +1,26 @@
+version: "3.1"
+
+services:
+  wordpress:
+    build: .
+    ports:
+      - 8888:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: true
+      WORDPRESS_CONFIG_EXTRA: "define( 'WP_DEBUG_DISPLAY', true );"
+    volumes:
+      - ./dist/trunk:/var/www/html/wp-content/plugins/podcloud
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - ./test/db:/var/lib/mysql
