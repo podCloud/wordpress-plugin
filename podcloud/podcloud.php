@@ -29,26 +29,10 @@ if ( ! defined( "WPINC" ) ) {
     die;
 }
 
-define( "PODCLOUD_VERSION", "1.2.0" );
+define( "PODCLOUD_VERSION", "1.3.0" );
 define( "PODCLOUD_HELPER_SCRIPT", "https://podcloud.fr/player-embed/helper.js" );
 
-function podcloud_add_helper( $html, $url, $attr, $post_ID ) {
-    if ( false !== strpos( $url, "podcloud.fr" ) ) {
-        wp_enqueue_script("podcloud_helper");
-    }
-
-    return $html;
-}
-
-add_filter( "embed_oembed_html", "podcloud_add_helper", 99, 4 );
-
-function podcloud_enqueue_gutenberg_helper() {
-    wp_enqueue_script("podcloud_gutenberg_helper");
-}
-add_action( "enqueue_block_editor_assets", "podcloud_enqueue_gutenberg_helper" );
-
-function podcloud_init() {
-
+function podcloud_enqueue_helper() {
     // register scripts
     wp_register_script(
         "podcloud_helper",
@@ -57,7 +41,21 @@ function podcloud_init() {
         PODCLOUD_VERSION,
         true
     );
+    wp_enqueue_script("podcloud_helper");
 
+    wp_register_style(
+        "podcloud_helper_style",
+        plugins_url( "podcloud-embed.css", __FILE__ ),
+        [],
+        PODCLOUD_VERSION,
+        "all"
+    );
+    wp_enqueue_style("podcloud_helper_style");
+}
+add_action( "wp_enqueue_scripts", "podcloud_enqueue_helper" );
+
+
+function podcloud_enqueue_gutenberg_helper() {
     wp_register_script(
         "podcloud_gutenberg_helper",
         plugins_url("gutenberg-helper.js", __FILE__),
@@ -65,7 +63,11 @@ function podcloud_init() {
         PODCLOUD_VERSION,
         false
     );
+    wp_enqueue_script("podcloud_gutenberg_helper");
+}
+add_action( "enqueue_block_editor_assets", "podcloud_enqueue_gutenberg_helper" );
 
+function podcloud_init() {
     // add oembed provider
     $supported = [
         "podcloud.fr/podcast/*",
