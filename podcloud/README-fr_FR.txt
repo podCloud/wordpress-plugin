@@ -2,10 +2,12 @@
 
 Contributors: podcloud, pofmagicfingers
 Tags: podcloud, podcasting, player, podcast
-Requires at least: 2.9
-Tested up to: 6.0
-Stable tag: 1.3
+Requires at least: 4.6
+Tested up to: 6.4
+Stable tag: 1.6
 Requires PHP: 5.6
+Text Domain: podcloud
+Domain Path: /lang
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +44,9 @@ Vous pouvez [nous contacter](https://podcloud.fr/contact) ou rejoindre notre [co
 2. Un lecteur podCloud redimensionné dans un post.
 
 == Changelog ==
+
+= 1.6 =
+- Mise à jour pour WordPress 6.4
 
 = 1.3 =
 - Mise à jour pour WordPress 6.0

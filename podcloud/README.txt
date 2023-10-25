@@ -3,9 +3,11 @@
 Contributors: podcloud, pofmagicfingers
 Tags: podcloud, podcasting, player, podcast
 Requires at least: 4.6
-Tested up to: 6.0
-Stable tag: 1.4
+Tested up to: 6.4
+Stable tag: 1.6
 Requires PHP: 5.6
+Text Domain: podcloud
+Domain Path: /lang
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +43,9 @@ You can [contact us](https://podcloud.fr/contact) or join our [Discord community
 2. This is a podCloud player automatically resized in a post
 
 == Changelog ==
+
+= 1.6 =
+- Update for WordPress 6.4
 
 = 1.3 =
 
