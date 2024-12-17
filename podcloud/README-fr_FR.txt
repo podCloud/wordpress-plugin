@@ -3,7 +3,7 @@
 Contributors: podcloud, pofmagicfingers
 Tags: podcloud, podcasting, player, podcast
 Requires at least: 4.6
-Tested up to: 6.4
+Tested up to: 6.7.1
 Stable tag: 1.6
 Requires PHP: 5.6
 Text Domain: podcloud
@@ -21,8 +21,8 @@ Ce plugin permet l'ajout de lecteur intégré podCloud en collant un lien vers u
 
 = Comment ajouter un lecteur podCloud =
 
-Collez un lien podCloud, et WordPress ajoutera automatiquement le lecteur. 
-Vous pouvez aussi ajouter un bloc du type podCloud via le bouton + ou la commande /podcloud 
+Collez un lien podCloud, et WordPress ajoutera automatiquement le lecteur.
+Vous pouvez aussi ajouter un bloc du type podCloud via le bouton + ou la commande /podcloud
 
 = Quels formats de liens sont acceptés ? =
 
