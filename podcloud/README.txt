@@ -4,7 +4,7 @@ Contributors: podcloud, pofmagicfingers
 Tags: podcloud, podcasting, player, podcast
 Requires at least: 4.6
 Tested up to: 6.7.1
-Stable tag: 1.6
+Stable tag: 1.7
 Requires PHP: 5.6
 Text Domain: podcloud
 Domain Path: /lang

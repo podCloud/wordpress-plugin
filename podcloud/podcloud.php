@@ -9,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       podCloud
  * Description:       This plugins allow embedding of the podCloud player by pasting a podcast or episode URL into editor.
- * Version:           1.6.0
+ * Version:           1.7.0
  * Author:            podCloud
  * Author URI:        https://podcloud.fr
  * Text Domain:       podcloud
